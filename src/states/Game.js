@@ -77,7 +77,7 @@ export default class extends Phaser.State {
     // Start the game paused
     this.game.paused = true
     this.game.input.onDown.add(this.unPause, this) // unpause on any action
-    this.wasd = this.game.add.sprite(this.world.centerX, this.world.centerY, 'wasd')
+    this.wasd = this.game.add.sprite(this.game.camera.width / 2, this.game.camera.height / 2, 'wasd')
 
     // Game options
     this.hitOnce = false;
@@ -100,7 +100,7 @@ export default class extends Phaser.State {
     if (!this.hitOnce && this.win) {
       this.bravo.play()
       this.bravo.onStop.add(function(){
-        this.game.add.sprite(this.world.x, this.world.y, 'os')
+        this.game.add.sprite(game.camera.x, game.camera.y, 'os')
       }, this)
       // this.game.destroy()
     } else if (!this.hitOnce) {

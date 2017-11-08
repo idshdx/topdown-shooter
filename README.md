@@ -48,7 +48,7 @@ Run:
 ## Deploy for cordova:
 Make sure to uncomment the cordova.js file in the src/index.html and to update config.xml with your informations. (name/description...)
 
-There is 3 platforms supported :
+There are 3 platforms supported :
 - browser
 - ios
 - android
