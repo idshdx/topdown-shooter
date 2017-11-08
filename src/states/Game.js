@@ -17,13 +17,13 @@ export default class extends Phaser.State {
     banner.fill = '#77BFA3'
     banner.smoothed = false
     banner.anchor.setTo(0.5)
-    
+
     // Sounds
     this.scream = game.add.audio('scream');
     this.woodHit = game.add.audio('woodHit')
     this.stopShoting = this.game.add.audio('stopShoting')
     this.bravo = this.game.add.audio('bravo')
-    // When the game is paused, so its all its sound and physics so we must use vanilla Javascript to play sounds
+    // When the game is paused, so all its sound and physics so we must use vanilla Javascript to play sounds
     this.music = new Audio('./assets/audio/intro-awful.wav')
     this.wasd = new Audio('./assets/audio/wasd.m4a')
     this.wasd.play()
